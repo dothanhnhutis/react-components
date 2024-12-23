@@ -2,11 +2,11 @@ import React from "react";
 import SmartInputInt from "./components/smart-input-int";
 
 function App() {
-  const [value, setValue] = React.useState<string>("0");
+  const [value, setValue] = React.useState<number>(-50);
 
-  React.useEffect(() => {
-    console.log(value);
-  }, [value]);
+  // React.useEffect(() => {
+  //   console.log("value", value);
+  // }, [value]);
 
   return (
     <div>
@@ -14,8 +14,8 @@ function App() {
       <SmartInputInt
         className="border focus-visible:outline-none"
         input={value}
-        min={0}
-        max={100}
+        min={-100}
+        max={-1}
         onInputChange={(v) => setValue(v)}
       />
     </div>
